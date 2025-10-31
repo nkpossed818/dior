@@ -13,7 +13,7 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alinha o conteúdo para o topo */
+    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
     padding: 20px 0;
@@ -21,7 +21,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 400px; /* Mantém o foco centralizado */
+    max-width: 400px;
     padding: 20px;
     background-color: #1a1a1a; /* Fundo do container ligeiramente cinza */
     border-radius: var(--border-radius);
@@ -29,13 +29,13 @@ body {
     text-align: center;
 }
 
-.hero-section, .members-section, .links-section {
+.hero-section, .members-section {
     margin-bottom: 30px;
     padding: 15px;
     border-bottom: 1px solid #333; /* Separador sutil */
 }
-.members-section, .links-section {
-    border: 1px solid #222; /* Borda da 'pastinha' */
+.members-section {
+    border: 1px solid #222; 
     border-radius: var(--border-radius);
     margin-top: 20px;
 }
@@ -59,9 +59,9 @@ h2 {
     max-width: 200px;
     height: auto;
     border-radius: 15px;
-    /* ✅ REMOVIDO: A borda foi removida */
-    margin: 20px 0 15px 0; /* Espaçamento abaixo da imagem para o botão */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Sombra sutil */
+    /* ✅ REMOVIDO: Borda */
+    margin: 20px 0 15px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
 .action-button, .link-button {
@@ -87,9 +87,9 @@ h2 {
     background-color: #555555;
 }
 
-/* Estilo para os links do Telegram */
+/* O link-button não é mais usado na página principal, mas mantemos o estilo */
 .link-button {
-    background-color: #000000; /* Preto sólido */
+    background-color: #000000;
     border: 1px solid var(--primary-color);
 }
 .link-button:hover {
@@ -103,7 +103,7 @@ h2 {
 }
 
 .member-list li {
-    background-color: #222222; /* Fundo para cada membro */
+    background-color: #222222;
     padding: 8px 15px;
     margin-bottom: 5px;
     border-radius: 5px;
@@ -127,7 +127,7 @@ h2 {
 /* Estilo do menu lateral */
 .sidebar {
     height: 100%;
-    width: 0; /* Começa escondido */
+    width: 0; /* Começa escondido (0px) */
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -151,7 +151,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Links dentro do menu */
+/* Links dentro do menu (diferentes dos botões principais) */
 .sidebar-link {
     padding: 15px 8px 15px 32px;
     text-decoration: none;
@@ -184,10 +184,4 @@ h2 {
 
 #close-btn:hover {
     color: #f1f1f1;
-}
-
-/* Garante que o conteúdo principal não fique sob o menu */
-.container {
-    /* Adicionamos uma margem à esquerda para a transição */
-    transition: margin-left .5s; 
 }
