@@ -30,15 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Função para abrir o menu
     const openNav = () => {
+        // ESSA LINHA FAZ O MENU APARECER!
         sidebar.style.width = "250px"; 
-        // Move o conteúdo principal para o lado, se necessário
-        // document.querySelector('.container').style.marginLeft = "250px"; 
     };
 
     // Função para fechar o menu
     const closeNav = () => {
+        // ESSA LINHA FAZ O MENU SUMIR!
         sidebar.style.width = "0";
-        // document.querySelector('.container').style.marginLeft= "0";
     };
 
     // Adiciona ouvintes de evento aos botões
