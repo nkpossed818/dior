@@ -185,3 +185,9 @@ h2 {
 #close-btn:hover {
     color: #f1f1f1;
 }
+
+/* --- Ajuste para ícones do Telegram na Sidebar --- */
+.sidebar-link .fab {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
