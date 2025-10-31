@@ -1,111 +1,81 @@
-:root {
-    /* Cores atualizadas para Tons de Cinza/Preto */
-    --primary-color: #333333; /* Cinza escuro para botões/foco */
-    --secondary-color: #444444; /* Um cinza um pouco mais claro */
-    --background-color: #0d0d0d; /* Fundo Preto Quase Total */
-    --text-color: #ffffff; /* Texto branco */
-    --border-radius: 8px;
-}
+/* --- Estilos do Menu Lateral (Sidebar) --- */
 
-body {
-    background-color: var(--background-color);
+/* Estilo para o ícone de abrir o menu */
+#menu-icon {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 2em;
     color: var(--text-color);
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Alinha o conteúdo para o topo */
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px 0;
-}
-
-.container {
-    width: 90%;
-    max-width: 400px; /* Mantém o foco centralizado */
-    padding: 20px;
-    background-color: #1a1a1a; /* Fundo do container ligeiramente cinza */
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-.hero-section, .members-section, .links-section {
-    margin-bottom: 30px;
-    padding: 15px;
-    border-bottom: 1px solid #333; /* Separador sutil */
-}
-.members-section, .links-section {
-    border: 1px solid #222; /* Borda da 'pastinha' */
-    border-radius: var(--border-radius);
-    margin-top: 20px;
-}
-
-h1 {
-    color: var(--text-color);
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-h2 {
-    color: #cccccc; /* Títulos em cinza claro */
-    font-size: 1.4em;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-.org-photo {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 15px;
-    /* ✅ REMOVIDO: A borda foi removida */
-    margin: 20px 0 15px 0; /* Espaçamento abaixo da imagem para o botão */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Sombra sutil */
-}
-
-.action-button, .link-button {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    text-align: center;
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    border-radius: var(--border-radius);
-    transition: background-color 0.3s ease;
-    border: none;
     cursor: pointer;
+    z-index: 1001; /* Garante que fique acima de todo o conteúdo */
+    padding: 5px;
 }
 
-/* Estilo para o botão de música */
-#play-button {
-    background-color: var(--primary-color); /* Cinza escuro */
-}
-#play-button:hover {
-    background-color: #555555;
-}
-
-/* Estilo para os links do Telegram */
-.link-button {
-    background-color: #000000; /* Preto sólido */
-    border: 1px solid var(--primary-color);
-}
-.link-button:hover {
-    background-color: var(--secondary-color);
-}
-
-.member-list {
-    list-style: none;
-    padding: 0;
-    text-align: left;
+/* Estilo do menu lateral */
+.sidebar {
+    height: 100%;
+    width: 0; /* Começa escondido */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #111; /* Cor de fundo escura */
+    overflow-x: hidden;
+    transition: 0.5s; /* Animação suave */
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    text-align: center;
 }
 
-.member-list li {
-    background-color: #222222; /* Fundo para cada membro */
-    padding: 8px 15px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    font-size: 0.9em;
+/* Título dentro do menu */
+.sidebar h2 {
+    color: #ccc;
+    font-size: 1.2em;
+    padding: 8px 8px 25px 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+/* Links dentro do menu */
+.sidebar-link {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 1.1em;
+    color: var(--text-color);
+    display: block;
+    transition: 0.3s;
+    background-color: var(--primary-color);
+    margin: 10px auto;
+    width: 80%;
+    border-radius: var(--border-radius);
+}
+
+.sidebar-link:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Botão de fechar (X) */
+#close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+    color: #818181;
+    transition: 0.3s;
+}
+
+#close-btn:hover {
+    color: #f1f1f1;
+}
+
+/* Garante que o conteúdo principal não fique sob o menu */
+.container {
+    /* Adicionamos uma margem à esquerda para a transição */
+    transition: margin-left .5s; 
 }
