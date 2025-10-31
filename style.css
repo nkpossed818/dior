@@ -1,92 +1,111 @@
 :root {
-    --primary-color: #007bff; /* Cor principal, como o azul do Telegram */
-    --secondary-color: #28a745; /* Cor secundária (botões) */
-    --background-color: #1a1a2e; /* Fundo escuro */
-    --text-color: #ffffff; /* Texto claro */
+    /* Cores atualizadas para Tons de Cinza/Preto */
+    --primary-color: #333333; /* Cinza escuro para botões/foco */
+    --secondary-color: #444444; /* Um cinza um pouco mais claro */
+    --background-color: #0d0d0d; /* Fundo Preto Quase Total */
+    --text-color: #ffffff; /* Texto branco */
+    --border-radius: 8px;
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
-    margin: 0;
-    padding: 20px;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /* Alinha o conteúdo para o topo */
     min-height: 100vh;
-    text-align: center;
+    margin: 0;
+    padding: 20px 0;
 }
 
 .container {
-    width: 100%;
-    max-width: 600px;
-    padding: 30px;
-    background-color: #16213e;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 400px; /* Mantém o foco centralizado */
+    padding: 20px;
+    background-color: #1a1a1a; /* Fundo do container ligeiramente cinza */
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.hero-section, .members-section, .links-section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-bottom: 1px solid #333; /* Separador sutil */
+}
+.members-section, .links-section {
+    border: 1px solid #222; /* Borda da 'pastinha' */
+    border-radius: var(--border-radius);
+    margin-top: 20px;
 }
 
 h1 {
-    color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1.8em;
     margin-bottom: 10px;
 }
 
 h2 {
-    color: var(--text-color);
-    margin-top: 30px;
+    color: #cccccc; /* Títulos em cinza claro */
+    font-size: 1.4em;
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .org-photo {
     width: 100%;
-    max-width: 300px; /* Limita o tamanho da foto */
+    max-width: 200px;
     height: auto;
-    border-radius: 8px;
-    margin: 20px 0;
-    border: 3px solid var(--primary-color);
+    border-radius: 15px;
+    /* ✅ REMOVIDO: A borda foi removida */
+    margin: 20px 0 15px 0; /* Espaçamento abaixo da imagem para o botão */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Sombra sutil */
 }
 
-/* Estilo para os botões de link */
-.link-button, .action-button {
+.action-button, .link-button {
     display: block;
     width: 100%;
-    padding: 15px;
-    margin: 15px 0;
+    padding: 12px;
+    margin-bottom: 10px;
+    text-align: center;
     text-decoration: none;
     color: var(--text-color);
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
     font-weight: bold;
-    cursor: pointer;
+    border-radius: var(--border-radius);
     transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
+/* Estilo para o botão de música */
+#play-button {
+    background-color: var(--primary-color); /* Cinza escuro */
+}
+#play-button:hover {
+    background-color: #555555;
+}
+
+/* Estilo para os links do Telegram */
+.link-button {
+    background-color: #000000; /* Preto sólido */
+    border: 1px solid var(--primary-color);
+}
 .link-button:hover {
-    background-color: #0056b3;
-}
-
-.action-button {
     background-color: var(--secondary-color);
-    margin-bottom: 30px;
-}
-
-.action-button:hover {
-    background-color: #1e7e34;
 }
 
 .member-list {
     list-style: none;
     padding: 0;
+    text-align: left;
 }
 
 .member-list li {
-    background-color: #2d385f;
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 4px;
-    text-align: left;
+    background-color: #222222; /* Fundo para cada membro */
+    padding: 8px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 0.9em;
 }
