@@ -5,64 +5,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('close-btn');
 
-    let isPlaying = false; 
+    let isPlaying = false;
 
-    // --- 1. Configuração do Autoplay e Play/Pause ---
-    
-    // Tentativa de Autoplay (Mutado)
-    // Usamos um pequeno atraso para garantir que o DOM esteja totalmente pronto
-    setTimeout(() => {
-        audio.play()
-            .then(() => {
-                // Sucesso: música iniciou (mutada)
-                isPlaying = true;
-                playButton.textContent = 'PAUSE'; 
-                audio.muted = true; // Força o mudo inicial
-            })
-            .catch(error => {
-                // Falha: Autoplay bloqueado.
-                console.log('Autoplay blocked. User must click to start.');
-                isPlaying = false;
-                playButton.textContent = 'SONNE';
-            });
-    }, 500); // Atraso de 500ms
+    // --- 1. Configuração do Play/Pause (Sem Autoplay) ---
 
-    // Lógica do botão Play/Pause
-    function togglePlayPause() {
+    playButton.addEventListener('click', () => {
         if (isPlaying) {
             audio.pause();
             playButton.textContent = 'SONNE';
-            isPlaying = false;
         } else {
-            // Se o usuário clicar, desmutamos e garantimos o play!
-            audio.muted = false; 
             audio.play();
             playButton.textContent = 'PAUSE';
-            isPlaying = true;
         }
-    }
+        isPlaying = !isPlaying;
+    });
+
+    // --- 2. Configuração da Sidebar ---
+
+    // Inicialização da Sidebar (garantindo que esteja fora da tela no CSS)
     
-    // Adiciona o listener APÓS a tentativa de autoplay (para evitar duplicação)
-    playButton.addEventListener('click', togglePlayPause);
-
-
-    // --- 2. Configuração da Sidebar (Com correção de posição) ---
-    
-    // Inicia a sidebar fora da tela
-    sidebar.style.left = '-300px'; 
-    sidebar.style.transition = 'left 0.5s'; // Garante a transição suave
-
+    // Abrir menu
     menuIcon.addEventListener('click', () => {
-        sidebar.style.left = '0'; // Abre
+        sidebar.style.left = '0';
     });
 
+    // Fechar menu pelo 'x'
     closeBtn.addEventListener('click', () => {
-        sidebar.style.left = '-300px'; // Fecha
+        sidebar.style.left = '-300px'; 
     });
     
-    // Fecha a sidebar ao clicar em um link
+    // Fechar a sidebar ao clicar em um link
     document.querySelectorAll('.sidebar-link').forEach(link => {
         link.addEventListener('click', () => {
+            // Pequeno atraso para a navegação começar antes de fechar a sidebar
             setTimeout(() => {
                 sidebar.style.left = '-300px'; 
             }, 300);
