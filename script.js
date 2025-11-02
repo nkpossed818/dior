@@ -7,7 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let isPlaying = false;
 
-    // --- 1. Configuração do Play/Pause (Sem Autoplay) ---
+    // --- 1. Configuração do Play/Pause ---
+
+    // Define o estado inicial da música se o navegador forçar a pausa (SONNE)
+    if (audio.paused) {
+        isPlaying = false;
+        playButton.textContent = 'SONNE';
+    } else {
+        isPlaying = true;
+        playButton.textContent = 'PAUSE';
+    }
+
 
     playButton.addEventListener('click', () => {
         if (isPlaying) {
@@ -20,26 +30,26 @@ document.addEventListener('DOMContentLoaded', () => {
         isPlaying = !isPlaying;
     });
 
-    // --- 2. Configuração da Sidebar ---
+    // --- 2. Configuração da Sidebar (Usando 'width' para garantir o funcionamento) ---
 
-    // Inicialização da Sidebar (garantindo que esteja fora da tela no CSS)
-    
     // Abrir menu
     menuIcon.addEventListener('click', () => {
-        sidebar.style.left = '0';
+        // ✅ CORREÇÃO: Usa 'width' para abrir o menu
+        sidebar.style.width = '250px'; 
     });
 
     // Fechar menu pelo 'x'
     closeBtn.addEventListener('click', () => {
-        sidebar.style.left = '-300px'; 
+        // ✅ CORREÇÃO: Usa 'width' para fechar o menu
+        sidebar.style.width = '0'; 
     });
     
     // Fechar a sidebar ao clicar em um link
     document.querySelectorAll('.sidebar-link').forEach(link => {
         link.addEventListener('click', () => {
-            // Pequeno atraso para a navegação começar antes de fechar a sidebar
             setTimeout(() => {
-                sidebar.style.left = '-300px'; 
+                // Fecha após o clique no link
+                sidebar.style.width = '0'; 
             }, 300);
         });
     });
