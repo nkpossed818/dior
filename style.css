@@ -59,7 +59,6 @@ h2 {
     max-width: 200px;
     height: auto;
     border-radius: 15px;
-    /* ✅ REMOVIDO: Borda */
     margin: 20px 0 15px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
@@ -85,15 +84,6 @@ h2 {
 }
 #play-button:hover {
     background-color: #555555;
-}
-
-/* O link-button não é mais usado na página principal, mas mantemos o estilo */
-.link-button {
-    background-color: #000000;
-    border: 1px solid var(--primary-color);
-}
-.link-button:hover {
-    background-color: var(--secondary-color);
 }
 
 .member-list {
@@ -124,17 +114,17 @@ h2 {
     padding: 5px;
 }
 
-/* Estilo do menu lateral */
+/* ✅ CORREÇÃO CHAVE: Aqui garantimos width=0 e a transição suave */
 .sidebar {
     height: 100%;
-    width: 0; /* Começa escondido (0px) */
+    width: 0; /* <-- TEM QUE ESTAR 0 AQUI PARA ESCONDER! */
     position: fixed;
     z-index: 1000;
     top: 0;
     left: 0;
     background-color: #111; /* Cor de fundo escura */
     overflow-x: hidden;
-    transition: 0.5s; /* Animação suave */
+    transition: 0.5s; /* <-- ESSA LINHA FAZ A ANIMAÇÃO SUAVE NO WIDTH! */
     padding-top: 60px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.5);
     text-align: center;
@@ -151,7 +141,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Links dentro do menu (diferentes dos botões principais) */
+/* Links dentro do menu */
 .sidebar-link {
     padding: 15px 8px 15px 32px;
     text-decoration: none;
@@ -186,7 +176,7 @@ h2 {
     color: #f1f1f1;
 }
 
-/* --- Ajuste para ícones do Telegram na Sidebar --- */
+/* Ajuste para ícones do Telegram na Sidebar */
 .sidebar-link .fab {
     margin-right: 10px;
     font-size: 1.2em;
