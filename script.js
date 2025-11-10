@@ -1,55 +1,48 @@
-Document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Variáveis para o Áudio e Botão
     const audio = document.getElementById('background-audio');
     const playButton = document.getElementById('play-button');
+    
+    // 2. Variáveis para o Menu Lateral
     const menuIcon = document.getElementById('menu-icon');
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('close-btn');
 
-    let isPlaying = false;
-
-    // --- 1. Configuração do Play/Pause ---
-
-    // Define o estado inicial da música se o navegador forçar a pausa (SONNE)
-    if (audio.paused) {
-        isPlaying = false;
-        playButton.textContent = 'SONNE';
-    } else {
-        isPlaying = true;
-        playButton.textContent = 'PAUSE';
-    }
-
-
+    // Estado inicial: Assume que a música está parada e o botão é 'SONNE'
+    let isPlaying = false; 
+    
+    // Configuração do botão Play/Pause
     playButton.addEventListener('click', () => {
         if (isPlaying) {
-            audio.pause();
+            // Se estiver tocando, pausa
+            if (audio) { audio.pause(); }
             playButton.textContent = 'SONNE';
         } else {
-            audio.play();
+            // Se estiver pausado, toca
+            if (audio) { audio.play(); }
             playButton.textContent = 'PAUSE';
         }
-        isPlaying = !isPlaying;
+        isPlaying = !isPlaying; // Inverte o estado
     });
 
-    // --- 2. Configuração da Sidebar (Usando 'width' para garantir o funcionamento) ---
+    // --- Configuração da Sidebar (Menu Lateral) ---
 
-    // Abrir menu
+    // Abrir menu (usa 'width' para animação)
     menuIcon.addEventListener('click', () => {
-        // ✅ CORREÇÃO: Usa 'width' para abrir o menu
-        sidebar.style.width = '250px'; 
+        if (sidebar) { sidebar.style.width = '250px'; }
     });
 
     // Fechar menu pelo 'x'
     closeBtn.addEventListener('click', () => {
-        // ✅ CORREÇÃO: Usa 'width' para fechar o menu
-        sidebar.style.width = '0'; 
+        if (sidebar) { sidebar.style.width = '0'; }
     });
-
+    
     // Fechar a sidebar ao clicar em um link
     document.querySelectorAll('.sidebar-link').forEach(link => {
         link.addEventListener('click', () => {
+            // Garante que o menu feche depois que o clique for processado
             setTimeout(() => {
-                // Fecha após o clique no link
-                sidebar.style.width = '0'; 
+                if (sidebar) { sidebar.style.width = '0'; }
             }, 300);
         });
     });
