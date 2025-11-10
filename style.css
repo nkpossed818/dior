@@ -1,78 +1,183 @@
-/* --- Estilos do Player de Música Fixo (music-player-container) --- */
-
-.music-player-container {
-    /* Torna o player Fixo no rodapé */
-    position: fixed; 
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    max-width: 440px; /* Ajusta para ser no máximo a largura do container principal + um pouco */
-    
-    /* Centraliza o player em dispositivos maiores */
-    left: 50%; 
-    transform: translateX(-50%);
-
-    /* Estilo visual */
-    background-color: #1a1a1a; /* Cor similar ao seu container */
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    padding: 15px 20px 25px; 
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
-    z-index: 999; /* Garante que fique acima de quase tudo */
+:root {
+    /* Cores atualizadas para Tons de Cinza/Preto */
+    --primary-color: #333333; /* Cinza escuro para botões/foco */
+    --secondary-color: #444444; /* Um cinza um pouco mais claro */
+    --background-color: #0d0d0d; /* Fundo Preto Quase Total */
+    --text-color: #ffffff; /* Texto branco */
+    --border-radius: 8px;
 }
 
-/* Controles de tempo e barra */
-.player-controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 15px;
+body {
+    background-color: var(--background-color);
     color: var(--text-color);
-    font-size: 12px;
-}
-
-/* Barra de progresso */
-#progress-bar {
-    flex-grow: 1; 
-    height: 4px;
-    margin: 0 10px;
-    cursor: pointer;
-    
-    /* Estilo visual da barra */
-    -webkit-appearance: none;
-    appearance: none;
-    background: #444; /* Fundo cinza escuro */
-    border-radius: 5px;
-}
-/* Estilo do preenchimento da barra */
-#progress-bar::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    background: var(--text-color); /* Puxador branco */
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/* Botões do player (apenas o play/pause no centro) */
-.player-buttons {
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
 }
 
-#play-pause-btn {
-    background-color: var(--primary-color);
-    border: none;
+.container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #1a1a1a; /* Fundo do container ligeiramente cinza */
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.hero-section, .members-section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-bottom: 1px solid #333; /* Separador sutil */
+}
+.members-section {
+    border: 1px solid #222; 
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+}
+
+h1 {
     color: var(--text-color);
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 50%; /* Botão redondo */
-    cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
-#play-pause-btn:hover {
+h2 {
+    color: #cccccc; /* Títulos em cinza claro */
+    font-size: 1.4em;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.org-photo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px 0 15px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.action-button, .link-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para o botão de música */
+#play-button {
+    background-color: var(--primary-color); /* Cinza escuro */
+}
+#play-button:hover {
     background-color: #555555;
+}
+
+.member-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.member-list li {
+    background-color: #222222;
+    padding: 8px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* --- Estilos do Menu Lateral (Sidebar) --- */
+
+/* Estilo para o ícone de abrir o menu */
+#menu-icon {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 2em;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 1001; /* Garante que fique acima de todo o conteúdo */
+    padding: 5px;
+}
+
+/* ✅ CORREÇÃO CHAVE: Aqui garantimos width=0 e a transição suave */
+.sidebar {
+    height: 100%;
+    width: 0; /* <-- TEM QUE ESTAR 0 AQUI PARA ESCONDER! */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #111; /* Cor de fundo escura */
+    overflow-x: hidden;
+    transition: 0.5s; /* <-- ESSA LINHA FAZ A ANIMAÇÃO SUAVE NO WIDTH! */
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+/* Título dentro do menu */
+.sidebar h2 {
+    color: #ccc;
+    font-size: 1.2em;
+    padding: 8px 8px 25px 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+/* Links dentro do menu */
+.sidebar-link {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 1.1em;
+    color: var(--text-color);
+    display: block;
+    transition: 0.3s;
+    background-color: var(--primary-color);
+    margin: 10px auto;
+    width: 80%;
+    border-radius: var(--border-radius);
+}
+
+.sidebar-link:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Botão de fechar (X) */
+#close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+    color: #818181;
+    transition: 0.3s;
+}
+
+#close-btn:hover {
+    color: #f1f1f1;
+}
+
+/* Ajuste para ícones do Telegram na Sidebar */
+.sidebar-link .fab {
+    margin-right: 10px;
+    font-size: 1.2em;
 }
