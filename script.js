@@ -1,46 +1,75 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Variáveis para o Áudio e Botão
     const audio = document.getElementById('background-audio');
     const playButton = document.getElementById('play-button');
-    
-    // 2. Variáveis para o Menu Lateral
     const menuIcon = document.getElementById('menu-icon');
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('close-btn');
 
-    // Estado inicial: Assume que a música está parada e o botão é 'SONNE'
     let isPlaying = false; 
+
+    // --- 1. Configuração do Autoplay (Mutado) ---
     
-    // Configuração do botão Play/Pause
-    playButton.addEventListener('click', () => {
+    if (audio) {
+        // Tenta iniciar a reprodução automaticamente e mudo
+        audio.play()
+            .then(() => {
+                // Sucesso: música iniciou (mutada)
+                isPlaying = true;
+                playButton.textContent = 'PAUSE'; 
+                audio.muted = true; // Força o mudo inicial
+            })
+            .catch(error => {
+                // Falha: Autoplay bloqueado. Inicia em estado pausado.
+                console.log('Autoplay blocked. User must click to start.');
+                isPlaying = false;
+                playButton.textContent = 'SONNE';
+            });
+    }
+
+    // --- 2. Lógica do Play/Pause/Alternar ---
+
+    function togglePlayPause() {
         if (isPlaying) {
-            // Se estiver tocando, pausa
+            // Se estiver tocando (mutado ou não), pausa.
             if (audio) { audio.pause(); }
             playButton.textContent = 'SONNE';
+            isPlaying = false;
         } else {
-            // Se estiver pausado, toca
-            if (audio) { audio.play(); }
+            // Se estiver pausado, toca e REMOVE o mudo.
+            if (audio) { 
+                audio.muted = false; 
+                audio.play();
+            }
             playButton.textContent = 'PAUSE';
+            isPlaying = true;
         }
-        isPlaying = !isPlaying; // Inverte o estado
-    });
+    }
+    
+    // O botão sempre alternará entre PAUSE e SONNE
+    if (playButton) {
+        playButton.addEventListener('click', togglePlayPause);
+    }
 
-    // --- Configuração da Sidebar (Menu Lateral) ---
 
-    // Abrir menu (usa 'width' para animação)
-    menuIcon.addEventListener('click', () => {
-        if (sidebar) { sidebar.style.width = '250px'; }
-    });
+    // --- 3. Configuração da Sidebar (Consertada com 'width') ---
+
+    // Abrir menu
+    if (menuIcon) {
+        menuIcon.addEventListener('click', () => {
+            if (sidebar) { sidebar.style.width = '250px'; }
+        });
+    }
 
     // Fechar menu pelo 'x'
-    closeBtn.addEventListener('click', () => {
-        if (sidebar) { sidebar.style.width = '0'; }
-    });
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            if (sidebar) { sidebar.style.width = '0'; }
+        });
+    }
     
     // Fechar a sidebar ao clicar em um link
     document.querySelectorAll('.sidebar-link').forEach(link => {
         link.addEventListener('click', () => {
-            // Garante que o menu feche depois que o clique for processado
             setTimeout(() => {
                 if (sidebar) { sidebar.style.width = '0'; }
             }, 300);
