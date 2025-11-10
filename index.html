@@ -28,7 +28,7 @@
         </a>
     </nav>
     <main class="container">
-        <audio id="main-audio" loop> 
+        <audio id="background-audio" loop> 
             <source src="Sonne(MP3_160K).mp3" type="audio/mpeg">
         </audio>
 
@@ -39,7 +39,8 @@
 
             <img src="IMG_20251030_201515_988.jpg" alt="Foto da organização" class="org-photo">
 
-            </section>
+            <button id="play-button" class="action-button">SONNE</button>
+        </section>
 
         <section class="members-section">
             <h2>Glory Boys</h2> 
@@ -56,20 +57,7 @@
             </ul>
         </section>
     </main>
-    
-    <div id="music-player-fixed" class="music-player-container">
-        <div class="player-controls">
-            <span id="current-time">0:00</span>
-            <input type="range" id="progress-bar" value="0" min="0" max="100">
-            <span id="total-time">0:00</span>
-        </div>
 
-        <div class="player-buttons">
-            <button id="play-pause-btn" aria-label="Play/Pause">
-                <i class="fa-solid fa-play"></i>
-            </button>
-        </div>
-    </div>
     <script src="script.js"></script>
 </body>
 </html>
