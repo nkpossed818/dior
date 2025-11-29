@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('close-btn');
 
-    // --- 1. Configuração do Autoplay e Sincronização ---
+    // --- 1. Configuração do Autoplay e Sincronização do Player de Mídia ---
     
     if (audio) {
         // Garante que o Autoplay seja tentado e permaneça mutado inicialmente
@@ -17,24 +17,24 @@ document.addEventListener('DOMContentLoaded', () => {
         // Sincroniza o botão SONNE/PAUSE com o estado do player nativo
         audio.onplay = () => { 
             if (playButton) playButton.textContent = 'PAUSE'; 
-            audio.muted = false; // Garante que desmuta se tocar
+            audio.muted = false; // A primeira interação de play do usuário desmuta o áudio
         };
         audio.onpause = () => { 
             if (playButton) playButton.textContent = 'SONNE'; 
         };
         
-        // Sincroniza a label inicial do botão se a música iniciar
+        // Sincroniza a label inicial do botão se a música iniciar (mutada)
         if (!audio.paused) {
              if (playButton) playButton.textContent = 'PAUSE';
         }
     }
 
-    // --- 2. Lógica do Botão SONNE/PAUSE (Para interagir com o player nativo) ---
+    // --- 2. Lógica do Botão SONNE/PAUSE ---
     if (playButton) {
         playButton.addEventListener('click', () => {
             if (!audio) return;
             
-            audio.muted = false; // A primeira interação remove o mudo
+            audio.muted = false; // Garante que a primeira interação remove o mudo
             
             if (audio.paused) {
                 audio.play();
