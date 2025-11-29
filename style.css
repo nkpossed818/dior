@@ -179,4 +179,27 @@ h2 {
 .sidebar-link .fab {
     margin-right: 10px;
     font-size: 1.2em;
+/* --- Estilo para o texto Codificado (#DRC) --- */
+.codified-text {
+    font-family: 'Courier New', Courier, monospace; /* Fonte tipo terminal */
+    font-size: 0.9em; /* Um pouco menor que o texto principal */
+    color: #00ff00; /* Verde neon, como em "Matrix" */
+    text-shadow: 
+        1px 1px 2px rgba(0,255,0,0.5), /* Sombra verde */
+        -1px -1px 2px rgba(0,0,0,0.5),  /* Sombra preta */
+        2px 0 3px rgba(255,0,0,0.3),   /* Pequeno "glitch" vermelho */
+        -2px 0 3px rgba(0,0,255,0.3);  /* Pequeno "glitch" azul */
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+    display: inline-block; /* Para o transform: translateZ(0) funcionar */
+    transform: translateZ(0); /* Correção de tremor */
+}
+
+/* Ajuste para o h1 para que o codified-text fique alinhado */
+h1 {
+    display: flex; /* Permite controlar o alinhamento dos elementos internos */
+    flex-direction: column; /* Coloca os elementos um abaixo do outro */
+    align-items: center; /* Centraliza os elementos */
+    line-height: 1.2; /* Ajuste do espaçamento entre as linhas */
+}
+
 }
