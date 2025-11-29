@@ -44,6 +44,11 @@ h1 {
     color: var(--text-color);
     font-size: 1.8em;
     margin-bottom: 10px;
+    /* Estilo para alinhar os elementos internos (texto e #DRC) */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    line-height: 1.2; 
     /* Correção do tremor */
     transform: translateZ(0);
 }
@@ -116,7 +121,7 @@ h2 {
 
 .sidebar {
     height: 100%;
-    width: 0; /* COMEÇA ESCONDIDO */
+    width: 0; 
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -179,6 +184,8 @@ h2 {
 .sidebar-link .fab {
     margin-right: 10px;
     font-size: 1.2em;
+}
+
 /* --- Estilo para o texto Codificado (#DRC) --- */
 .codified-text {
     font-family: 'Courier New', Courier, monospace; /* Fonte tipo terminal */
@@ -192,14 +199,4 @@ h2 {
     letter-spacing: 2px; /* Espaçamento entre as letras */
     display: inline-block; /* Para o transform: translateZ(0) funcionar */
     transform: translateZ(0); /* Correção de tremor */
-}
-
-/* Ajuste para o h1 para que o codified-text fique alinhado */
-h1 {
-    display: flex; /* Permite controlar o alinhamento dos elementos internos */
-    flex-direction: column; /* Coloca os elementos um abaixo do outro */
-    align-items: center; /* Centraliza os elementos */
-    line-height: 1.2; /* Ajuste do espaçamento entre as linhas */
-}
-
 }
