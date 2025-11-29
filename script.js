@@ -5,45 +5,67 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('close-btn');
 
-    // --- 1. LÓGICA DE AUTOPLAY (MÁXIMA AGRESSIVIDADE) ---
+    // --- 1. Configuração do Autoplay e Sincronização do Player de Mídia ---
     
     if (audio) {
-        // 1. Garante que o áudio esteja MUDO. ESSENCIAL para tentar o Autoplay.
+        // Garante que o Autoplay seja tentado e permaneça mutado inicialmente
         audio.muted = true;
-        
-        // 2. Tenta forçar o início da reprodução no carregamento (método padrão)
-        audio.play().then(() => {
-            // Sucesso
-            console.log('Autoplay iniciado com sucesso (mutado).');
-            if (playButton) playButton.textContent = 'PAUSE'; 
-        }).catch(error => {
-             console.log('Tentativa 1 falhou: Autoplay bloqueado.');
+        audio.play().catch(error => {
+             console.log('Autoplay blocked. User must click on player or button.');
         });
-
-        // 3. Tenta forçar o play com base na INTERAÇÃO do usuário na página (qualquer lugar)
-        // Isso cobre o bloqueio de autoplay e garante que a música comece no primeiro toque/clique.
-        document.body.addEventListener('click', function() {
-            if (audio.paused) {
-                audio.muted = true; // Mantém o mudo até o play button ser clicado
-                audio.play().catch(error => {
-                    // Se falhar aqui, é um bloqueio muito rígido.
-                });
-            }
-        }, { once: true }); // Só dispara no PRIMEIRO clique do usuário em qualquer lugar
-
-        // 4. Sincroniza o botão se o play/pause for clicado no player nativo
+        
+        // Sincroniza o botão SONNE/PAUSE com o estado do player nativo
         audio.onplay = () => { 
             if (playButton) playButton.textContent = 'PAUSE'; 
-            audio.muted = false; // Desmuta se o usuário interagir
+            audio.muted = false; // A primeira interação de play do usuário desmuta o áudio
         };
         audio.onpause = () => { 
             if (playButton) playButton.textContent = 'SONNE'; 
         };
+        
+        // Sincroniza a label inicial do botão se a música iniciar (mutada)
+        if (!audio.paused) {
+             if (playButton) playButton.textContent = 'PAUSE';
+        }
     }
 
-    // --- 2. Lógica do Botão SONNE/PAUSE (Primeira interação do usuário) ---
+    // --- 2. Lógica do Botão SONNE/PAUSE ---
     if (playButton) {
         playButton.addEventListener('click', () => {
             if (!audio) return;
             
-            // ESSENCIAL: Garante que o áudio não está mais mutado após
+            audio.muted = false; // Garante que a primeira interação remove o mudo
+            
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    }
+
+    // --- 3. Configuração da Sidebar ---
+
+    // Abrir menu
+    if (menuIcon) {
+        menuIcon.addEventListener('click', () => {
+            if (sidebar) { sidebar.style.width = '250px'; }
+        });
+    }
+
+    // Fechar menu pelo 'x'
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            if (sidebar) { sidebar.style.width = '0'; }
+        });
+    }
+    
+    // Fechar a sidebar ao clicar em um link
+    document.querySelectorAll('.sidebar-link').forEach(link => {
+        link.addEventListener('click', () => {
+            setTimeout(() => {
+                if (sidebar) { sidebar.style.width = '0'; }
+            }, 300);
+        });
+    });
+});
