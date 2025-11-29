@@ -29,6 +29,35 @@ body {
     text-align: center;
 }
 
+/* --- Estilo para o Player de Mídia Nativo (NOVO) --- */
+#background-audio {
+    width: 100%;
+    margin-top: 15px;
+    background-color: #111111; /* Cor de fundo do player */
+    border-radius: 5px;
+    height: 35px; /* Altura do player */
+    overflow: hidden; 
+}
+
+/* Garante que os controles do player usem o nosso tema escuro */
+#background-audio::-webkit-media-controls-panel {
+    background-color: #222222;
+    color: var(--text-color);
+}
+
+#background-audio::-webkit-media-controls-play-button,
+#background-audio::-webkit-media-controls-mute-button {
+    filter: invert(1); /* Inverte a cor dos ícones para branco */
+}
+
+#background-audio::-webkit-media-controls-current-time-display,
+#background-audio::-webkit-media-controls-time-remaining-display {
+    color: #ffffff;
+}
+
+/* Fim dos estilos do Player */
+
+
 .hero-section, .members-section {
     margin-bottom: 30px;
     padding: 15px;
@@ -128,75 +157,4 @@ h2 {
     left: 0;
     background-color: #111; 
     overflow-x: hidden;
-    transition: 0.5s; 
-    padding-top: 60px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
-    text-align: center;
-    /* Correção do tremor */
-    transform: translateZ(0);
-}
-
-.sidebar h2 {
-    color: #ccc;
-    font-size: 1.2em;
-    padding: 8px 8px 25px 8px;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-bottom: 1px solid #333;
-    margin-bottom: 20px;
-}
-
-.sidebar-link {
-    padding: 15px 8px 15px 32px;
-    text-decoration: none;
-    font-size: 1.1em;
-    color: var(--text-color);
-    display: block;
-    transition: 0.3s;
-    background-color: var(--primary-color);
-    margin: 10px auto;
-    width: 80%;
-    border-radius: var(--border-radius);
-    /* Correção do tremor */
-    transform: translateZ(0);
-}
-
-.sidebar-link:hover {
-    background-color: #555;
-    color: #fff;
-}
-
-#close-btn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    cursor: pointer;
-    color: #818181;
-    transition: 0.3s;
-}
-
-#close-btn:hover {
-    color: #f1f1f1;
-}
-
-.sidebar-link .fab {
-    margin-right: 10px;
-    font-size: 1.2em;
-}
-
-/* --- Estilo para o texto Codificado (#DRC) --- */
-.codified-text {
-    font-family: 'Courier New', Courier, monospace; /* Fonte tipo terminal */
-    font-size: 0.9em; /* Um pouco menor que o texto principal */
-    color: #00ff00; /* Verde neon, como em "Matrix" */
-    text-shadow: 
-        1px 1px 2px rgba(0,255,0,0.5), /* Sombra verde */
-        -1px -1px 2px rgba(0,0,0,0.5),  /* Sombra preta */
-        2px 0 3px rgba(255,0,0,0.3),   /* Pequeno "glitch" vermelho */
-        -2px 0 3px rgba(0,0,255,0.3);  /* Pequeno "glitch" azul */
-    letter-spacing: 2px; /* Espaçamento entre as letras */
-    display: inline-block; /* Para o transform: translateZ(0) funcionar */
-    transform: translateZ(0); /* Correção de tremor */
-}
+    transition: 0.5s;
