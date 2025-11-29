@@ -5,53 +5,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('close-btn');
 
-    let isPlaying = false; 
-
-    // --- 1. Configuração do Autoplay (Mutado) ---
+    // --- 1. Configuração do Autoplay e Sincronização ---
     
     if (audio) {
-        // Tenta iniciar a reprodução automaticamente e mudo
-        audio.play()
-            .then(() => {
-                // Sucesso: música iniciou (mutada)
-                isPlaying = true;
-                playButton.textContent = 'PAUSE'; 
-                audio.muted = true; // Força o mudo inicial
-            })
-            .catch(error => {
-                // Falha: Autoplay bloqueado. Inicia em estado pausado.
-                console.log('Autoplay blocked. User must click to start.');
-                isPlaying = false;
-                playButton.textContent = 'SONNE';
-            });
-    }
-
-    // --- 2. Lógica do Play/Pause/Alternar ---
-
-    function togglePlayPause() {
-        if (isPlaying) {
-            // Se estiver tocando (mutado ou não), pausa.
-            if (audio) { audio.pause(); }
-            playButton.textContent = 'SONNE';
-            isPlaying = false;
-        } else {
-            // Se estiver pausado, toca e REMOVE o mudo.
-            if (audio) { 
-                audio.muted = false; 
-                audio.play();
-            }
-            playButton.textContent = 'PAUSE';
-            isPlaying = true;
+        // Garante que o Autoplay seja tentado e permaneça mutado inicialmente
+        audio.muted = true;
+        audio.play().catch(error => {
+             console.log('Autoplay blocked. User must click on player or button.');
+        });
+        
+        // Sincroniza o botão SONNE/PAUSE com o estado do player nativo
+        audio.onplay = () => { 
+            if (playButton) playButton.textContent = 'PAUSE'; 
+            audio.muted = false; // Garante que desmuta se tocar
+        };
+        audio.onpause = () => { 
+            if (playButton) playButton.textContent = 'SONNE'; 
+        };
+        
+        // Sincroniza a label inicial do botão se a música iniciar
+        if (!audio.paused) {
+             if (playButton) playButton.textContent = 'PAUSE';
         }
     }
-    
-    // O botão sempre alternará entre PAUSE e SONNE
+
+    // --- 2. Lógica do Botão SONNE/PAUSE (Para interagir com o player nativo) ---
     if (playButton) {
-        playButton.addEventListener('click', togglePlayPause);
+        playButton.addEventListener('click', () => {
+            if (!audio) return;
+            
+            audio.muted = false; // A primeira interação remove o mudo
+            
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
     }
 
-
-    // --- 3. Configuração da Sidebar (Consertada com 'width') ---
+    // --- 3. Configuração da Sidebar ---
 
     // Abrir menu
     if (menuIcon) {
