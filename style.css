@@ -1,3 +1,12 @@
+:root {
+    --primary-color: #333333;
+    --secondary-color: #444444; 
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --border-radius: 8px;
+}
+
+/* TELA DE ENTRADA (O que você adicionou de novo) */
 #enter-screen {
     position: fixed;
     top: 0;
@@ -24,4 +33,95 @@
     color: #888;
     font-size: 1.2rem;
     margin-top: 10px;
+}
+
+/* TODO O RESTO DO DESIGN (O que estava faltando no novo) */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #111111;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#background-audio {
+    width: 100%;
+    margin-top: 15px;
+    background-color: #111111;
+    border-radius: 5px;
+    height: 35px;
+    overflow: hidden; 
+    margin-bottom: 5px;
+}
+
+/* Estilos do Menu Sidebar que faltavam no seu atual */
+#menu-icon {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 2em;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 1001;
+    padding: 5px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0; 
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden;
+    transition: 0.5s; 
+    padding-top: 60px;
+}
+
+/* Estilo da Imagem e Botões */
+.org-photo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px 0 15px 0;
+}
+
+.action-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: var(--border-radius);
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Lista de Membros */
+.member-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.member-list li {
+    background-color: #222222;
+    padding: 8px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
