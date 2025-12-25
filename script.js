@@ -1,14 +1,14 @@
 const membersData = {
-    'terror': { name: 'TERROR', role: '#drc', img: '', desc: 'X', link: 'X' },
-    'vianna': { name: 'VIANNA', role: '#drc', img: 'https://i.postimg.cc/Kvmc5GK8/IMG-20251225-195322-595.jpg', desc: 'Lealdade ao rei', link: 'https://atoinfracional' },
-    'nk': { name: 'NK', role: '#drc', img: 'https://i.postimg.cc/QNnyxSpS/IMG-20251225-192923-071.jpg', desc: 'Jesus is king', link: 'https://t.me/santificam' },
-    'richard': { name: 'RICHARD', role: '#drc', img: 'https://i.postimg.cc/ZKw7DHqN/IMG-20251225-200406-605.jpg', desc: 'Se vires seu amigo se associando com seu inimigo, saiba que você tem dois inimigos: um declarado e um secreto.', link: 'https://diorczar' },
-    'sod3ad': { name: 'SOD3AD', role: '#drc', img: 'https://i.postimg.cc/JhD2XXMt/IMG-20251225-200114-905.jpg', desc: 'Demônios que jesus mandou pros porcos, retornou lobo em pele de cordeiro.', link: 'https://t.me/duslog' },
-    'vitin': { name: 'VITIN', role: '#drc', img: 'https://i.postimg.cc/JhXWLvy6/IMG-20251225-202254-685.jpg', desc: '— —', link: 'https://t.me/torturava' },
-    'julimau': { name: 'JULIMAU', role: '#drc', img: 'https://i.postimg.cc/28gcD64W/IMG-20251225-203028-263.jpg', desc: '🚀', link: 'https://IPOLRJ' },
-    'wrld': { name: 'WRLD', role: '#drc', img: 'https://i.postimg.cc/hPQspBN5/IMG-20251225-203155-756.jpg', desc: 'Since 2018', link: 'https://extorsao' },
-    'maverick': { name: 'MAVERICK', role: '#drc', img: 'https://i.postimg.cc/FKYHJTY2/IMG-20251025-144719-559.jpg', desc: 'Administrador', link: 'https://diorczar' },
-    'klaus': { name: 'KLAUS', role: 'ADMIN', img: 'https://i.postimg.cc/TwjQjqS2/IMG-20251225-195012-114.jpg', desc: 'Conhecereis a verdade e a verdade vos libertará.', link: 'https://t.me/sequestrado' }
+    'terror': { name: 'Terror', role: '#drc', img: '', desc: 'X', link: 'X' },
+    'vianna': { name: 'Vianna', role: '#drc', img: 'https://i.postimg.cc/Kvmc5GK8/IMG-20251225-195322-595.jpg', desc: 'Lealdade ao rei', link: 'https://atoinfracional' },
+    'nk': { name: 'nk', role: '#drc', img: 'https://i.postimg.cc/QNnyxSpS/IMG-20251225-192923-071.jpg', desc: 'Jesus is king', link: 'https://t.me/santificam' },
+    'richard': { name: 'Richard', role: '#drc', img: 'https://i.postimg.cc/ZKw7DHqN/IMG-20251225-200406-605.jpg', desc: 'Se vires seu amigo se associando com seu inimigo, saiba que você tem dois inimigos: um declarado e um secreto.', link: 'https://diorczar' },
+    'sod3ad': { name: 'Sod3ad', role: '#drc', img: 'https://i.postimg.cc/JhD2XXMt/IMG-20251225-200114-905.jpg', desc: 'Demônios que jesus mandou pros porcos, retornou lobo em pele de cordeiro.', link: 'https://t.me/duslog' },
+    'vitin': { name: 'Vitin', role: '#drc', img: 'https://i.postimg.cc/JhXWLvy6/IMG-20251225-202254-685.jpg', desc: '— —', link: 'https://t.me/torturava' },
+    'julimau': { name: 'Julimau', role: '#drc', img: 'https://i.postimg.cc/28gcD64W/IMG-20251225-203028-263.jpg', desc: '🚀', link: 'https://IPOLRJ' },
+    'wrld': { name: 'Wrld', role: '#drc', img: 'https://i.postimg.cc/hPQspBN5/IMG-20251225-203155-756.jpg', desc: 'Since 2018', link: 'https://extorsao' },
+    'maverick': { name: 'Maverick', role: '#drc', img: 'https://i.postimg.cc/FKYHJTY2/IMG-20251025-144719-559.jpg', desc: 'Administrador', link: 'https://diorczar' },
+    'klaus': { name: 'Klaus', role: '#drc', img: 'https://i.postimg.cc/TwjQjqS2/IMG-20251225-195012-114.jpg', desc: 'Conhecereis a verdade e a verdade vos libertará.', link: 'https://t.me/sequestrado' }
 };
 
 function startSite() {
