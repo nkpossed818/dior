@@ -1,13 +1,13 @@
 const membersData = {
     'terror': { name: 'TERROR', role: 'FUNDADOR', img: '', desc: 'X', link: 'X' },
-    'vianna': { name: 'VIANNA', role: 'FUNDADOR', img: 'LINK_AQUI', desc: 'Fundador Dior.', link: '#' },
+    'vianna': { name: 'VIANNA', role: 'FUNDADOR', img: 'https://i.postimg.cc/Kvmc5GK8/IMG-20251225-195322-595.jpg', desc: 'Lealdade ao rei', link: 'https://atoinfracional' },
     'nk': { name: 'NK', role: 'DONO', img: 'https://i.postimg.cc/QNnyxSpS/IMG-20251225-192923-071.jpg', desc: 'Jesus is king', link: 'https://t.me/santificam' },
-    'richard': { name: 'RICHARD', role: 'SUB DONO', img: 'https://i.postimg.cc/ZKw7DHqN/IMG-20251225-200406-605.jpg', desc: '', link: '#' },
+    'richard': { name: 'RICHARD', role: 'SUB DONO', img: 'https://i.postimg.cc/ZKw7DHqN/IMG-20251225-200406-605.jpg', desc: 'Se vires seu amigo se associando com seu inimigo, saiba que você tem dois inimigos: um declarado e um secreto.', link: 'https://diorczar' },
     'sod3ad': { name: 'SOD3AD', role: 'ADMIN', img: 'https://i.postimg.cc/JhD2XXMt/IMG-20251225-200114-905.jpg', desc: 'Demônios que jesus mandou pros porcos, retornou lobo em pele de cordeiro.', link: 'https://t.me/duslog' },
-    'vitin': { name: 'VITIN', role: 'ADMIN', img: 'LINK_AQUI', desc: 'Admin Dior.', link: '#' },
+    'vitin': { name: 'VITIN', role: '#drc', img: '', desc: '— —', link: '#' },
     'julimau': { name: 'JULIMAU', role: 'ADMIN', img: 'LINK_AQUI', desc: 'Admin Dior.', link: '#' },
     'wrld': { name: 'WRLD', role: 'ADMIN', img: 'LINK_AQUI', desc: 'Admin Dior.', link: '#' },
-    'maverick': { name: 'MAVERICK', role: 'ADMIN', img: 'LINK_AQUI', desc: 'Admin Dior.', link: '#' },
+    'maverick': { name: 'MAVERICK', role: 'ADMIN', img: 'https://i.postimg.cc/FKYHJTY2/IMG-20251025-144719-559.jpg', desc: 'Administrador', link: 'https://diorczar' },
     'klaus': { name: 'KLAUS', role: 'ADMIN', img: 'https://i.postimg.cc/TwjQjqS2/IMG-20251225-195012-114.jpg', desc: 'Conhecereis a verdade e a verdade vos libertará.', link: 'https://t.me/sequestrado' }
 };
 
