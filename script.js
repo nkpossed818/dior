@@ -5,7 +5,7 @@ const membersData = {
         role: 'DONO',
         img: 'https://i.postimg.cc/QNnyxSpS/IMG-20251225-192923-071.jpg', 
         desc: 'Trouver un équillibre au milieu du chaos',
-        link: 't.me/santificam'
+        link: 'https://t.me/santificam'
     }
 };
 
