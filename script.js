@@ -3,9 +3,9 @@ const membersData = {
     'nk': {
         name: 'NK',
         role: 'DONO',
-        img: 'COLOQUE_O_LINK_DA_FOTO_AQUI.jpg', 
-        desc: 'Descrição do NK aqui. @seu_insta',
-        link: 'https://instagram.com/seu_perfil'
+        img: 'https://i.postimg.cc/QNnyxSpS/IMG-20251225-192923-071.jpg', 
+        desc: 'Trouver un équillibre au milieu du chaos',
+        link: 't.me/santificam'
     }
 };
 
