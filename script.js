@@ -7,7 +7,7 @@ const membersData = {
     'vitin': { name: 'Vitin', role: '#drc', img: 'https://i.postimg.cc/JhXWLvy6/IMG-20251225-202254-685.jpg', desc: 'ㅤ', link: 'https://t.me/torturava' },
     'julimau': { name: 'Julimau', role: '#drc', img: 'https://i.postimg.cc/28gcD64W/IMG-20251225-203028-263.jpg', desc: '🚀', link: 'https://t.me/IPOLRJ' },
     'wrld': { name: 'Wrld', role: '#drc', img: 'https://i.postimg.cc/hPQspBN5/IMG-20251225-203155-756.jpg', desc: 'Since 2018', link: 'https://t.me/extorsao' },
-    'maverick': { name: 'Maverick', role: '#drc', img: 'https://i.postimg.cc/FKYHJTY2/IMG-20251025-144719-559.jpg', desc: 'Administrador', link: 'https://t.me/diorczar ' },
+    'maverick': { name: 'Maverick', role: '#drc', img: 'https://i.postimg.cc/FKYHJTY2/IMG-20251025-144719-559.jpg', desc: '≠', link: 'https://t.me/diorczar ' },
     'klaus': { name: 'Klaus', role: '#drc', img: 'https://i.postimg.cc/TwjQjqS2/IMG-20251225-195012-114.jpg', desc: 'Conhecereis a verdade e a verdade vos libertará.', link: 'https://t.me/sequestrado' }
 };
 
