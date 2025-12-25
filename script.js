@@ -4,7 +4,7 @@ const membersData = {
     'nk': { name: 'NK', role: '#drc', img: 'https://i.postimg.cc/QNnyxSpS/IMG-20251225-192923-071.jpg', desc: 'Jesus is king', link: 'https://t.me/santificam' },
     'richard': { name: 'RICHARD', role: '#drc', img: 'https://i.postimg.cc/ZKw7DHqN/IMG-20251225-200406-605.jpg', desc: 'Se vires seu amigo se associando com seu inimigo, saiba que você tem dois inimigos: um declarado e um secreto.', link: 'https://diorczar' },
     'sod3ad': { name: 'SOD3AD', role: '#drc', img: 'https://i.postimg.cc/JhD2XXMt/IMG-20251225-200114-905.jpg', desc: 'Demônios que jesus mandou pros porcos, retornou lobo em pele de cordeiro.', link: 'https://t.me/duslog' },
-    'vitin': { name: 'VITIN', role: '#drc', img: '', desc: '— —', link: '#' },
+    'vitin': { name: 'VITIN', role: '#drc', img: 'https://i.postimg.cc/JhXWLvy6/IMG-20251225-202254-685.jpg', desc: '— —', link: 'https://t.me/torturava' },
     'julimau': { name: 'JULIMAU', role: '#drc', img: 'LINK_AQUI', desc: 'Admin Dior.', link: '#' },
     'wrld': { name: 'WRLD', role: '#drc', img: 'LINK_AQUI', desc: 'Admin Dior.', link: '#' },
     'maverick': { name: 'MAVERICK', role: '#drc', img: 'https://i.postimg.cc/FKYHJTY2/IMG-20251025-144719-559.jpg', desc: 'Administrador', link: 'https://diorczar' },
