@@ -54,7 +54,7 @@
             <ul class="member-list">
                 <li>TERROR | FUNDADOR</li>
                 <li>VIANNA | FUNDADOR</li>
-                <li>NK | DONO</li>
+                <li onclick="openModal('nk')" style="cursor: pointer;">NK | DONO <i class="fas fa-external-link-alt" style="font-size: 10px; float: right; opacity: 0.5; margin-top: 5px;"></i></li>
                 <li>RICHARD | SUB DONO</li>
                 <li>SOD3AD | ADMIN</li>
                 <li>VITIN | ADMIN</li>
@@ -65,6 +65,16 @@
             </ul>
         </section>
     </main>
+
+    <div id="modal-member" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <img id="modal-img" src="" alt="Membro">
+            <h2 id="modal-name"></h2>
+            <p id="modal-desc"></p>
+            <a id="modal-link" href="#" target="_blank" class="action-button">INSTAGRAM</a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
