@@ -5,11 +5,10 @@ const membersData = {
     'richard': { name: 'Richard', role: '#drc', img: 'https://i.postimg.cc/ZKw7DHqN/IMG-20251225-200406-605.jpg', desc: 'Se vires seu amigo se associando com seu inimigo, saiba que você tem dois inimigos: um declarado e um secreto.', link: 'https://t.me/diorczar' },
     'sod3ad': { name: 'Sod3ad', role: '#drc', img: 'https://i.postimg.cc/JhD2XXMt/IMG-20251225-200114-905.jpg', desc: 'ㅤ', link: 'https://t.me/duslog' },
     'vitin': { name: 'Vitin', role: '#drc', img: 'https://i.postimg.cc/JhXWLvy6/IMG-20251225-202254-685.jpg', desc: 'ㅤ', link: 'https://t.me/torturava' },
+    'Trash': { name: 'Trash', role: '#drc', img: 'https://i.postimg.cc/TwjQjqS2/IMG-20251225-195012-114.jpg', desc: '"Que diremos, pois, a estas coisas? Se Deus é por nós, quem será contra nós?" - Romanos - 8:31', link: 'https://t.me/exterminei' }
     'julimau': { name: 'Julimau', role: '#drc', img: 'https://i.postimg.cc/28gcD64W/IMG-20251225-203028-263.jpg', desc: '🚀', link: 'https://t.me/IPOLRJ' },
     'wrld': { name: 'Wrld', role: '#drc', img: 'https://i.postimg.cc/hPQspBN5/IMG-20251225-203155-756.jpg', desc: 'Since 2018', link: 'https://t.me/extorsao' },
     'arthur': { name: 'Arthur', role: '#drc', img: 'https://i.postimg.cc/FH55RVMN/IMG-20251225-211845-873.jpg', desc: 'O caos é a matriz da criação.', link: 'https://t.me/ameacar'},
-    'Trash': { name: 'Trash', role: '#drc', img: 'https://i.postimg.cc/TwjQjqS2/IMG-20251225-195012-114.jpg', desc: 'Conhecereis a verdade e a verdade vos libertará.', link: 'https://t.me/' }
-};
     'klaus': { name: 'Klaus', role: '#drc', img: 'https://i.postimg.cc/TwjQjqS2/IMG-20251225-195012-114.jpg', desc: 'Conhecereis a verdade e a verdade vos libertará.', link: 'https://t.me/sequestrado' }
 };
 
