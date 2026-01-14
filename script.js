@@ -8,6 +8,8 @@ const membersData = {
     'julimau': { name: 'Julimau', role: '#drc', img: 'https://i.postimg.cc/28gcD64W/IMG-20251225-203028-263.jpg', desc: '🚀', link: 'https://t.me/IPOLRJ' },
     'wrld': { name: 'Wrld', role: '#drc', img: 'https://i.postimg.cc/hPQspBN5/IMG-20251225-203155-756.jpg', desc: 'Since 2018', link: 'https://t.me/extorsao' },
     'arthur': { name: 'Arthur', role: '#drc', img: 'https://i.postimg.cc/FH55RVMN/IMG-20251225-211845-873.jpg', desc: 'O caos é a matriz da criação.', link: 'https://t.me/ameacar'},
+    'Trash': { name: 'Trash', role: '#drc', img: 'https://i.postimg.cc/TwjQjqS2/IMG-20251225-195012-114.jpg', desc: 'Conhecereis a verdade e a verdade vos libertará.', link: 'https://t.me/' }
+};
     'klaus': { name: 'Klaus', role: '#drc', img: 'https://i.postimg.cc/TwjQjqS2/IMG-20251225-195012-114.jpg', desc: 'Conhecereis a verdade e a verdade vos libertará.', link: 'https://t.me/sequestrado' }
 };
 
