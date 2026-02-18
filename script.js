@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         playBtn.onclick = () => {
             audio.muted = false;
             if (audio.paused) { audio.play(); playBtn.innerText = 'PAUSE'; }
-            else { audio.pause(); playBtn.innerText = 'SONNE'; }
+            else { audio.pause(); playBtn.innerText = 'Play'; }
         };
     }
 
