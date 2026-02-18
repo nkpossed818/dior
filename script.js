@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.getElementById('sidebar');
     const closeBtn = document.getElementById('close-btn');
 
+    // Lógica do Player
     if (playBtn && audio) {
         playBtn.onclick = () => {
             audio.muted = false;
@@ -45,7 +46,29 @@ document.addEventListener('DOMContentLoaded', () => {
             else { audio.pause(); playBtn.innerText = 'SONNE'; }
         };
     }
+
+    // Menu Lateral
     if (menuIcon) menuIcon.onclick = () => sidebar.style.width = '250px';
     if (closeBtn) closeBtn.onclick = () => sidebar.style.width = '0';
     window.onclick = (e) => { if (e.target.id === 'modal-member') closeModal(); };
+
+    // --- LOGICA DO CARROSSEL DE FOTOS ---
+    const slider = document.getElementById('slider');
+    const currentTxt = document.getElementById('current');
+    const totalFotos = 18;
+
+    if (slider) {
+        for (let i = 1; i <= totalFotos; i++) {
+            const img = document.createElement('img');
+            img.src = `img/foto${i}.webp`;
+            img.alt = `Dior Photo ${i}`;
+            if (i > 1) img.loading = 'lazy';
+            slider.appendChild(img);
+        }
+
+        slider.addEventListener('scroll', () => {
+            const index = Math.round(slider.scrollLeft / slider.offsetWidth);
+            currentTxt.innerText = index + 1;
+        });
+    }
 });
