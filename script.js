@@ -9,7 +9,7 @@ const membersData = {
     'wlrd': { name: 'Wlrd', role: '#drc', img: 'https://i.postimg.cc/K8CZdPNM/IMG-20260218-165509-448.jpg', desc: 'osint, csint & forensics nerd', link: 'https://t.me/lover5224047' },
     'arthur': { name: 'Arthur', role: '#drc', img: 'https://i.postimg.cc/FH55RVMN/IMG-20251225-211845-873.jpg', desc: 'O caos é a matriz da criação.', link: 'https://t.me/ameacar'},
     'bey': { name: 'Bey', role: '#drc', img: 'https://i.postimg.cc/hPQspBN5/IMG-20251225-203155-756.jpg', desc: 'osint', link: 'https://t.me/pcrsc'},
-    'meliodas': { name: 'Meliodas', role: '#drc', img: 'https://i.postimg.cc/FH55RVMN/IMG-20251225-211845-873.jpg', desc: 'Seu pecado; meu julgamento.', link: 'https://t.me/sacrificacao'},
+    'meliodas': { name: 'Meliodas', role: '#drc', img: 'https://i.postimg.cc/bvq6YM3v/IMG-20260218-165325-175.jpg', desc: 'Seu pecado; meu julgamento.', link: 'https://t.me/sacrificacao'},
     'klaus': { name: 'Klaus', role: '#drc', img: 'https://i.postimg.cc/TwjQjqS2/IMG-20251225-195012-114.jpg', desc: 'Conhecereis a verdade e a verdade vos libertará.', link: 'https://t.me/sequestrado' }
 };
 
