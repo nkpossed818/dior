@@ -6,7 +6,9 @@ const membersData = {
     'vitin': { name: 'Vitin', role: '#drc', img: 'https://i.postimg.cc/JhXWLvy6/IMG-20251225-202254-685.jpg', desc: 'ㅤ', link: 'https://t.me/torturava' },
     'cobra': { name: 'Cobra', role: '#drc', img: 'https://i.postimg.cc/g2rLH0wd/IMG-20260218-155524-749.jpg', desc: 'يا إلهي جون', link: 'https://t.me/omegacarbonn' },
     'Skype': { name: 'Skype', role: '#drc', img: 'https://i.postimg.cc/28gcD64W/IMG-20251225-203028-263.jpg', desc: '.', link: 'https://t.me/diorczar' },
-    'wrld': { name: 'Wrld', role: '#drc', img: 'https://i.postimg.cc/hPQspBN5/IMG-20251225-203155-756.jpg', desc: 'Since 2018', link: 'https://t.me/extorsao' },
+    'wlrd': { name: 'Wlrd', role: '#drc', img: 'https://i.postimg.cc/hPQspBN5/IMG-20251225-203155-756.jpg', desc: 'osint, csint & forensics nerd', link: 'https://t.me/lover5224047' },
+    'arthur': { name: 'Arthur', role: '#drc', img: 'https://i.postimg.cc/FH55RVMN/IMG-20251225-211845-873.jpg', desc: 'O caos é a matriz da criação.', link: 'https://t.me/ameacar'},
+    'bey': { name: 'Bey', role: '#drc', img: 'https://i.postimg.cc/hPQspBN5/IMG-20251225-203155-756.jpg', desc: 'osint', link: 'https://t.me/pcrsc'},
     'arthur': { name: 'Arthur', role: '#drc', img: 'https://i.postimg.cc/FH55RVMN/IMG-20251225-211845-873.jpg', desc: 'O caos é a matriz da criação.', link: 'https://t.me/ameacar'},
     'klaus': { name: 'Klaus', role: '#drc', img: 'https://i.postimg.cc/TwjQjqS2/IMG-20251225-195012-114.jpg', desc: 'Conhecereis a verdade e a verdade vos libertará.', link: 'https://t.me/sequestrado' }
 };
