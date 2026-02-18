@@ -4,7 +4,7 @@ const membersData = {
     'nk': { name: 'nk', role: '#drc', img: 'https://i.postimg.cc/QNnyxSpS/IMG-20251225-192923-071.jpg', desc: 'Jesus is king', link: 'https://t.me/santificam' },
     'sod3ad': { name: 'Sod3ad', role: '#drc', img: 'https://i.postimg.cc/nLrB2zTQ/IMG-20260116-004753-821.jpg', desc: 'ㅤ', link: 'https://t.me/duslog' },
     'vitin': { name: 'Vitin', role: '#drc', img: 'https://i.postimg.cc/JhXWLvy6/IMG-20251225-202254-685.jpg', desc: 'ㅤ', link: 'https://t.me/torturava' },
-    'Cobra': { name: 'Cobra', role: '#drc', img: 'https://i.postimg.cc/LX2vN16w/IMG-20260114-203408-683.jpg', desc: 'Que diremos, pois, a estas coisas? Se Deus é por nós, quem será contra nós? - Romanos - 8:31 ', link: 'https://t.me/exterminei' },
+    'cobra': { name: 'COBRA', role: '#drc', img: 'https://i.postimg.cc/LX2vN16w/IMG-20260114-203408-683.jpg', desc: 'Que diremos, pois, a estas coisas? Se Deus é por nós, quem será contra nós? - Romanos - 8:31 ', link: 'https://t.me/exterminei' },
     'Skype': { name: 'Skype', role: '#drc', img: 'https://i.postimg.cc/28gcD64W/IMG-20251225-203028-263.jpg', desc: '.', link: 'https://t.me/diorczar' },
     'wrld': { name: 'Wrld', role: '#drc', img: 'https://i.postimg.cc/hPQspBN5/IMG-20251225-203155-756.jpg', desc: 'Since 2018', link: 'https://t.me/extorsao' },
     'arthur': { name: 'Arthur', role: '#drc', img: 'https://i.postimg.cc/FH55RVMN/IMG-20251225-211845-873.jpg', desc: 'O caos é a matriz da criação.', link: 'https://t.me/ameacar'},
