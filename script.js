@@ -2,7 +2,6 @@ const membersData = {
     'terror': { name: 'Terror', role: '#drc', img: 'https://i.postimg.cc/cJCKJZyd/IMG-20251225-204124-829.jpg', desc: 'silentium est initium insaniae.', link: 'https://t.me/nachtkrieg' },
     'vianna': { name: 'Vianna', role: '#drc', img: 'https://i.postimg.cc/Kvmc5GK8/IMG-20251225-195322-595.jpg', desc: 'Lealdade ao rei', link: 'https://t.me/atoinfracional' },
     'nk': { name: 'nk', role: '#drc', img: 'https://i.postimg.cc/QNnyxSpS/IMG-20251225-192923-071.jpg', desc: 'Jesus is king', link: 'https://t.me/santificam' },
-    'sod3ad': { name: 'Sod3ad', role: '#drc', img: 'https://i.postimg.cc/nLrB2zTQ/IMG-20260116-004753-821.jpg', desc: 'ㅤ', link: 'https://t.me/duslog' },
     'vitin': { name: 'Vitin', role: '#drc', img: 'https://i.postimg.cc/NfwCP5mX/IMG-20260218-170456-226.jpg', desc: 'ㅤ', link: 'https://t.me/torturava' },
     'cobra': { name: 'Cobra', role: '#drc', img: 'https://i.postimg.cc/g2rLH0wd/IMG-20260218-155524-749.jpg', desc: 'يا إلهي جون', link: 'https://t.me/omegacarbonn' },
     'skype': { name: 'Skype', role: '#drc', img: 'https://i.postimg.cc/28gcD64W/IMG-20251225-203028-263.jpg', desc: '.', link: 'https://t.me/diorczar' },
